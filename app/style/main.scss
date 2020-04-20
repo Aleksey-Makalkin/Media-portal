@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+@import "vars";
+@import "extends";
+
+
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+
+
+
+.nav {
+    margin-top: 30px;
+
+    .nav-touch {
+        text-align: center;
+        fill: $main-color;
+
+        width: 70px;
+        height: 50px;
+        background-color: darken(white, 8%);
+        border-radius: 5px;
+    }
+}
+
+.smi {
+    margin-top: 40px;
+
+    .smi-portal {
+        font-size: 18px;
+        color: $main-color;
+        font-family: "Roboto";
+        font-weight: 700;
+
+        padding-bottom: 20px;
+        border-bottom: 5px solid $main-color;
+    }
+}
+
+
+
+.header {
+    margin-top: 70px;
+
+    padding-bottom: 60px;
+    border-bottom: 2px solid $main-border-color;
+
+    h1 {
+        text-align: center;
+        font-size: 34px;
+        line-height: 50px;
+        color: #212325;
+        font-family: "Roboto";
+        font-weight: 700;
+
+        margin-bottom: 7px;
+    }
+
+    p {
+        text-align: center;
+        font-size: 14px;
+        color: #212325;
+        font-family: "Roboto";
+        font-weight: 400;
+
+        margin-bottom: 17px;
+    }
+
+    span {
+        font-size: 14px;
+        letter-spacing: 0px;
+        line-height: 22px;
+        color: #494c4d;
+        font-family: "Roboto";
+        font-weight: 400;
+    }
+
+    form {
+        input {
+            margin-top: 30px;
+
+            @extend %button;
+        }
+    }
+
+    .img {
+        width: 100%;
+        height: 200px;
+
+        border-radius: 5px;
+        background-color: darken(white, 20%);
+    }
+}
+
+
+
+.title-name {
+    margin-top: 20px;
+
+    span {
+        font-size: 24px;
+        letter-spacing: 0px;
+        color: #212325;
+        font-family: "Roboto";
+        font-weight: 700;
+
+        padding-right: 12px;
+        padding-bottom: 9px;
+        border-bottom: 3px solid $main-color;
+    }
+}
+
+.last-publish {
+    line-height: 50px;
+
+    margin-top: 40px;
+}
+
+
+
+.article-one {
+    margin-top: 10px;
+
+    .block-news {
+        @extend %block;
+
+        border-bottom: 2px solid $main-border-color;
+
+        .img {
+            border-radius: 5px;
+        }
+    }
+}
+
+
+
+
+.article-two {
+    margin-top: 15px;
+    padding-top: 40px;
+
+    border-top: 2px solid $main-border-color;
+
+    .block-bottom-news {
+        @extend %block;
+
+        form {
+            input {
+                font-size: 10px;
+                letter-spacing: 1px;
+                color: #609cf5;
+                font-family: "Roboto";
+                font-weight: 700;
+
+                padding: 9px 18px;
+            }
+        }
+    }
+}
+
+
+.footer {
+    margin-top: 60px;
+
+    text-align: center;
+
+    h5 {
+        font-size: 16px;
+        color: #212325;
+        font-family: "Roboto";
+        font-weight: 700;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 22px;
+        color: #494c4d;
+        font-family: "Roboto";
+        font-weight: 400;
+    }
+
+    &.last-contact {
+        margin-bottom: 80px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 768px) {
+
+    .header {
+
+        .img {
+        height: 100%;
+        }
+
+        h1, p {
+            text-align: left;
+        }
+    }
+
+
+    .article-one {
+
+        .block-news {
+            padding-left: 0px;
+            border-right: 2px solid $main-border-color;
+
+            &.two-colum {
+                padding-left: 20px;
+                padding-right: 0px;
+
+                border-right: none;
+            }
+
+            &.last-block {
+                padding-bottom: 0px;
+                margin-bottom: 20px;
+
+                border-bottom: none;
+            }
+        }
+    }
+
+
+    .article-two {
+        .block-bottom-news {
+            padding-left: 0px;
+
+            &.two-colum {
+                padding-right: 0px;
+                padding-left: 20px;
+            }
+        }
+    }
+
+
+    .footer {
+
+        h5, p {
+            text-align: left;
+        }
+    }
+
+}
