@@ -1,11 +1,17 @@
+// Шрифты
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
+
+
+// scss файлы
 @import "vars";
 @import "extends";
 
+@import "hidden-menu";
 
 
 
+// Общие стили
 * {
     margin: 0px;
     padding: 0px;
@@ -21,61 +27,15 @@ body {
 
 
 
+
+// Выезжающее меню (все стили описаны в отдельном scss файле _hidden-menu.scss)
 .menu-bar {
-    display: none;
-    //float: left;    // !!!!!
-    //width: 25%;    // !!!!!
-
-    margin-top: -30px;
-
-    background: #f5f6f7;
-
-    .search {
-        background: #eff1f2;
-
-        text-align: center;
-        padding: 12px 0px;
-
-        form {
-            input {
-                background: white;
-                padding: 10.5px 15px;
-                width: 90%;
-
-                border: 1px solid #e0e3e5;
-                border-radius: 9px;
-
-                font-size: 14px;
-                letter-spacing: 2px;
-                color: #91969a;
-                font-family: "Roboto";
-                font-weight: 400;
-            }
-        }
-    }
-
-    .menu {
-        margin-top: 30px;
-
-        h5 {
-            font-size: 18px;
-            letter-spacing: 0px;
-            color: #212325;
-            font-family: "Roboto";
-            font-weight: 700;
-        }
-        p {
-
-            a {
-
-            }
-        }
-    }
+    @extend %style-menu-bar;
 }
 
 
 
-
+// Блок-кнопка в верхнем левом углу, вызывающая меню
 .nav {
     margin-top: 30px;
 
@@ -85,11 +45,16 @@ body {
 
         width: 70px;
         height: 50px;
-        background-color: darken(white, 8%);
         border-radius: 5px;
+
+        background-color: #f2f2f2;
+        transition: all 0.4s ease;
     }
 }
 
+
+
+// Надпись "СМИ портал" вверху сайта
 .smi {
     margin-top: 40px;
 
@@ -106,6 +71,7 @@ body {
 
 
 
+// Шапка сайта с презентацией актуальной статьи
 .header {
     margin-top: 70px;
 
@@ -161,6 +127,7 @@ body {
 
 
 
+// Заголовок "Последние опубликованные"
 .title-name {
     margin-top: 20px;
 
@@ -175,6 +142,7 @@ body {
 
 
 
+// Основные блоки с новостями
 .article-one {
     margin-top: 20px;
 
@@ -191,6 +159,7 @@ body {
 
 
 
+// Нижние блоки с новостями
 .article-two {
     margin-top: 15px;
     padding-top: 40px;
@@ -216,28 +185,29 @@ body {
 
 
 
+// Футер сайта с контактной информацией
 .footer {
-    margin-top: 60px;
+    margin-bottom: 80px;
 
-    text-align: center;
+    .footer-block {
+        margin-top: 40px;
 
-    h5 {
-        font-size: 16px;
-        color: #212325;
-        font-family: "Roboto";
-        font-weight: 700;
-    }
+        text-align: center;
 
-    p {
-        font-size: 14px;
-        line-height: 22px;
-        color: #494c4d;
-        font-family: "Roboto";
-        font-weight: 400;
-    }
+        h5 {
+            font-size: 16px;
+            color: #212325;
+            font-family: "Roboto";
+            font-weight: 700;
+        }
 
-    &.last-contact {
-        margin-bottom: 80px;
+        p {
+            font-size: 14px;
+            line-height: 22px;
+            color: #494c4d;
+            font-family: "Roboto";
+            font-weight: 400;
+        }
     }
 }
 
@@ -246,16 +216,10 @@ body {
 
 
 
+// Медиа запросы
 
 
-
-
-
-
-
-
-
-
+// Оптимизация нажних новостных блоков под md и lg устройства (xl сохраняет параметры по умолчанию, блоки при этом отображаются корректно)
 @media (min-width: 768px) and (max-width: 1199px) {
     .article-two {
         .block-bottom-news {
@@ -271,8 +235,9 @@ body {
 
 
 
-
+// Оптимизация блоков под md и lg и xl устройства
 @media (min-width: 768px) {
+
 
     .header {
 
@@ -309,14 +274,31 @@ body {
     }
 
 
-
-
-
     .footer {
 
-        h5, p {
+        .footer-block {
             text-align: left;
+
+            .img, .content {
+                display: inline-block;
+            }
+
+            .content {
+                width: 440px;
+            }
         }
     }
 
+}
+
+
+// Оптимизация выдвижного меню под маленькие экраны
+@media (max-width: 714px) {
+    .menu-bar {
+        text-align: center;
+
+        .contact {
+            text-align: left;
+        }
+    }
 }
