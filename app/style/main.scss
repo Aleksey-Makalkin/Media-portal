@@ -35,6 +35,17 @@ body {
 
 
 
+.menu-bar {
+    span + .info-block .img:first-child {
+        background-image: $img-menu-one;
+    }
+    .info-block + .info-block .img:first-child {
+        background-image: $img-menu-two;
+    }
+}
+
+
+
 // Блок-кнопка в верхнем левом углу, вызывающая меню
 .nav {
     margin-top: 30px;
@@ -49,6 +60,10 @@ body {
 
         background-color: #f2f2f2;
         transition: all 0.4s ease;
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 }
 
@@ -121,7 +136,11 @@ body {
         height: 200px;
 
         border-radius: 5px;
-        background-color: darken(white, 20%);
+
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100%;
+        background-image: $img-header;
     }
 }
 
@@ -137,14 +156,15 @@ body {
 }
 
 .last-publish {
-    margin-top: 40px;
+    margin-top: 50px;
+
+    margin-bottom: 20px;
 }
 
 
 
-// Основные блоки с новостями
+// Верхнии блоки с новостями
 .article-one {
-    margin-top: 20px;
 
     .block-news {
         @extend %block;
@@ -153,7 +173,35 @@ body {
 
         .img {
             border-radius: 5px;
+
+            &:hover {
+                background-size: 107%;
+            }
         }
+    }
+}
+
+
+
+// Картинки для верхних блоков с новостями (для удобства: добавлять в файле _vars.scss)
+.article-one {
+    .col-12:nth-child(1) .block-news:nth-child(1) .img {
+        background-image: $img-top-one;
+    }
+    .col-12:nth-child(1) .block-news:nth-child(2) .img {
+        background-image: $img-top-two;
+    }
+    .col-12:nth-child(1) .block-news:nth-child(3) .img {
+        background-image: $img-top-three;
+    }
+    .col-12:nth-child(2) .block-news:nth-child(1) .img {
+        background-image: $img-top-four;
+    }
+    .col-12:nth-child(2) .block-news:nth-child(2) .img {
+        background-image: $img-top-five;
+    }
+    .col-12:nth-child(2) .block-news:nth-child(3) .img {
+        background-image: $img-top-six;
     }
 }
 
@@ -169,6 +217,13 @@ body {
     .block-bottom-news {
         @extend %block;
 
+        .img {
+
+            &:hover {
+                box-shadow: 0px 0px 15px silver;
+            }
+        }
+
         form {
             input {
                 font-size: 10px;
@@ -180,6 +235,24 @@ body {
                 padding: 9px 18px;
             }
         }
+    }
+}
+
+
+
+// Картинки для нижних блоков с новостями (для удобства: добавлять в файле _vars.scss)
+.article-two {
+    .col-12:nth-child(1) .block-bottom-news:nth-child(1) .img {
+        background-image: $img-bottom-one;
+    }
+    .col-12:nth-child(2) .block-bottom-news:nth-child(1) .img {
+        background-image: $img-bottom-two;
+    }
+    .col-12:nth-child(3) .block-bottom-news:nth-child(1) .img {
+        background-image: $img-bottom-three;
+    }
+    .col-12:nth-child(4) .block-bottom-news:nth-child(1) .img {
+        background-image: $img-bottom-four;
     }
 }
 

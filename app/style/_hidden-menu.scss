@@ -86,7 +86,9 @@
                 height: 100px;
                 border-radius: 5px;
 
-                background-color: darken(white, 20%);
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 100%;
 
                 margin-bottom: 20px;
             }
