@@ -1,3 +1,5 @@
+
+// Стили для кнопок
 %button {
     outline: none;
 
@@ -23,6 +25,7 @@
 
 
 
+// Стили для заголовков (основная часть страницы)
 %title-name-style {
     font-size: 24px;
     letter-spacing: 0px;
@@ -36,6 +39,7 @@
     border-bottom: 3px solid $main-color;
 }
 
+// Стили для заголовков (меню)
 %nav-bar-title-name-stile {
     font-size: 18px;
     letter-spacing: 0px;
@@ -52,13 +56,15 @@
 
 
 
+// Стили для блоков с новостями
 %block {
     padding: 20px;
-    padding-bottom: 35px;
+    padding-bottom: 85px;
+
+    margin-bottom: -50px;
 
     .img {
         width: 100%;
-        height: 190px;
 
         background-repeat: no-repeat;
         background-position: center;
@@ -67,10 +73,6 @@
         margin-bottom: 20px;
 
         transition: all 0.6s ease;
-
-        &:hover {
-            cursor: pointer;
-        }
     }
 
     h3 {

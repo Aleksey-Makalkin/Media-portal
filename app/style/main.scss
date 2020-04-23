@@ -24,6 +24,11 @@ body {
     overflow-x: hidden;
 }
 
+hr {
+    margin: 0px -30px 0px -30px;
+    border: 1px solid $main-border-color;
+}
+
 
 
 
@@ -35,6 +40,7 @@ body {
 
 
 
+// Картинки для новостей в выезжающем меню (для удобства: добавлять в файле _vars.scss)
 .menu-bar {
     span + .info-block .img:first-child {
         background-image: $img-menu-one;
@@ -146,7 +152,7 @@ body {
 
 
 
-// Заголовок "Последние опубликованные"
+// Заголовок общие стили (Стили прописанны в отдельном файле _extends.scss)
 .title-name {
     margin-top: 20px;
 
@@ -155,9 +161,9 @@ body {
     }
 }
 
+// Заголовок "Последние опубликованные"
 .last-publish {
     margin-top: 50px;
-
     margin-bottom: 20px;
 }
 
@@ -169,9 +175,9 @@ body {
     .block-news {
         @extend %block;
 
-        border-bottom: 2px solid $main-border-color;
-
         .img {
+            height: 190px;
+
             border-radius: 5px;
 
             &:hover {
@@ -184,26 +190,12 @@ body {
 
 
 // Картинки для верхних блоков с новостями (для удобства: добавлять в файле _vars.scss)
-.article-one {
-    .col-12:nth-child(1) .block-news:nth-child(1) .img {
-        background-image: $img-top-one;
-    }
-    .col-12:nth-child(1) .block-news:nth-child(2) .img {
-        background-image: $img-top-two;
-    }
-    .col-12:nth-child(1) .block-news:nth-child(3) .img {
-        background-image: $img-top-three;
-    }
-    .col-12:nth-child(2) .block-news:nth-child(1) .img {
-        background-image: $img-top-four;
-    }
-    .col-12:nth-child(2) .block-news:nth-child(2) .img {
-        background-image: $img-top-five;
-    }
-    .col-12:nth-child(2) .block-news:nth-child(3) .img {
-        background-image: $img-top-six;
-    }
-}
+.img-top-one {background-image: $img-top-one}
+.img-top-two {background-image: $img-top-two}
+.img-top-three {background-image: $img-top-three}
+.img-top-four {background-image: $img-top-four}
+.img-top-five {background-image: $img-top-five}
+.img-top-six {background-image: $img-top-six}
 
 
 
@@ -218,9 +210,10 @@ body {
         @extend %block;
 
         .img {
+            height: 150px;
 
             &:hover {
-                box-shadow: 0px 0px 15px silver;
+                box-shadow: 0px 0px 15px darken(white, 75%);
             }
         }
 
@@ -289,10 +282,26 @@ body {
 
 
 
+
 // Медиа запросы
 
 
-// Оптимизация нажних новостных блоков под md и lg устройства (xl сохраняет параметры по умолчанию, блоки при этом отображаются корректно)
+// Адаптация изображения верних блоков новостей
+@media (max-width: 992px) {
+    .article-one {
+
+        .block-news {
+
+            .img {
+                height: 120px;
+            }
+        }
+    }
+}
+
+
+
+// Адаптация нижних новостных блоков под md и lg устройства (xl сохраняет параметры по умолчанию, блоки при этом отображаются корректно)
 @media (min-width: 768px) and (max-width: 1199px) {
     .article-two {
         .block-bottom-news {
@@ -308,7 +317,7 @@ body {
 
 
 
-// Оптимизация блоков под md и lg и xl устройства
+// Адаптация блоков под md и lg и xl устройства
 @media (min-width: 768px) {
 
 
@@ -340,8 +349,6 @@ body {
             &.last-block {
                 padding-bottom: 0px;
                 margin-bottom: 20px;
-
-                border-bottom: none;
             }
         }
     }
@@ -365,7 +372,8 @@ body {
 }
 
 
-// Оптимизация выдвижного меню под маленькие экраны
+
+// Адаптация выдвижного меню под маленькие экраны
 @media (max-width: 714px) {
     .menu-bar {
         text-align: center;

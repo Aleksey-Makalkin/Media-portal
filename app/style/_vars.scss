@@ -1,4 +1,4 @@
-// Основной цвет (водчеркивающие линии, цвет кнопок)
+// Основной цвет (подчеркивающие линии, цвет кнопок)
 $main-color: #609cf5;
 
 // Цвет разделительных, тонких линий
@@ -9,35 +9,39 @@ $main-border-color: darken(white, 20%);
 
 //---Изображения-----------------------------------------------
 
+// Шапка
 $img-header: url(../media/google.jpg);
 
 
 
-$img-top-one: url(https://img.pngio.com/free-silver-backgrounds-pixelstalknet-silver-background-color-png-1950_1400.png);
+// Верхнии блоки с новостями
+$img-top-one: url(../media/badLanguage.jpg);
 
-$img-top-two: url(https://img.pngio.com/free-silver-backgrounds-pixelstalknet-silver-background-color-png-1950_1400.png);
+$img-top-two: url(../media/camera.jpg);
 
-$img-top-three: url(https://img.pngio.com/free-silver-backgrounds-pixelstalknet-silver-background-color-png-1950_1400.png);
+$img-top-three: url(../media/2220.jpg);
 
-$img-top-four: url(https://img.pngio.com/free-silver-backgrounds-pixelstalknet-silver-background-color-png-1950_1400.png);
+$img-top-four: url(../media/python.jpg);
 
-$img-top-five: url(https://img.pngio.com/free-silver-backgrounds-pixelstalknet-silver-background-color-png-1950_1400.png);
+$img-top-five: url(../media/git.jpg);
 
-$img-top-six: url(https://img.pngio.com/free-silver-backgrounds-pixelstalknet-silver-background-color-png-1950_1400.png);
-
-
-
-$img-bottom-one: url(../media/);
-
-$img-bottom-two: url(../media/);
-
-$img-bottom-three: url(../media/);
-
-$img-bottom-four: url(../media/);
+$img-top-six: url(../media/javaScript.jpg);
 
 
 
-$img-menu-one: url(../media/);
-$img-menu-two: url(../media/);
+// Нижнии блоки с новостями
+$img-bottom-one: url(../media/frontEnd.jpg);
+
+$img-bottom-two: url(../media/swift.jpg);
+
+$img-bottom-three: url(../media/pythonHomeWork.jpg);
+
+$img-bottom-four: url(../media/angular.jpg);
+
+
+
+// Боковое меню
+$img-menu-one: url(../media/kotik.jpg);
+$img-menu-two: url(../media/appleDocument.jpg);
 
 //--------------------------------------------------
